@@ -1,5 +1,5 @@
 Question = ["Vad har du studerat/jobbat med/gjort tidigare?", "Varför valde du denna utbildning?", "Hur kan vi skapa de bästa förutsättningarna för att du ska lyckas med dina studier?", "Något annat du vill berätta för din utbildningsledare?"]
-Answer = ["Journalistik, Grafisk design, Digital Marknadsföring.", "automatisering och statistik. Vill lära mig programmering.", "bidra med god stämning och god kompetens!", "Allt gott!", "Övningsuppgift Introveckan", "William Lindstedt"]
+Answer = ["Journalistik, Grafisk design, Digital Marknadsföring.", "automatisering och statistik. Vill lära mig programmering.", "bidra med god stämning och god kompetens!", "Allt gott!", "Övningsuppgift Introveckan", "William Akilles Lindstedt"]
 
 def hd(i):
   a = len(str(i))
