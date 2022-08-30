@@ -1,11 +1,9 @@
 import math
-list = [1,2,3]
+import matplotlib.pyplot as plt
 
-for i in list:
-    if i == 1:
-        print("Hej" )
-    if i == 2:
-        print("2 (string)")
-    if i == 3:
-         print(math.e)
+f = lambda x: x**2
+y = [f(x) for x in range(-5,6)]
+x = range(-5,6)
 
+plt.plot(x,y)
+plt.show()
