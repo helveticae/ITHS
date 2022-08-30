@@ -22,5 +22,3 @@ for i in Question:
   else:
     continue
 print(f"/{Answer[5]}")
-
-#Test commit
