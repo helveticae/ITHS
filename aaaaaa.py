@@ -5,5 +5,8 @@ f = lambda x: x**2
 y = [f(x) for x in range(-5,6)]
 x = range(-5,6)
 
-plt.plot(x,y)
+x =23
+y = math.sin(x)
+
+plt.plot(y)
 plt.show()
