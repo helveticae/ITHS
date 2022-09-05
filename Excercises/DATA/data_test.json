@@ -1,1 +1,20 @@
-{"name":"William", "age":30, "city":"Göteborg"}
+{
+        "firstName": "Qwerty",
+        "lastName": "Ulreva",
+        "hobbies": ["saying hello", "saying hello to flies", "having weird hobbys"],
+        "age": 2000,
+        "children": [
+         {
+                 "firstName": "Dora",
+                 "age": 6
+             },
+            {
+                "firstName": "Dvorak",
+                "age": 6
+            },
+            {
+                "firstName": "Jojo",
+                "age": 8
+            }
+        ]
+    }
