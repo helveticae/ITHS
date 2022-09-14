@@ -1,0 +1,1490 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.9px Helvetica; color: #131314; -webkit-text-stroke: #131314}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.9px Helvetica; color: #0a1c8b; -webkit-text-stroke: #0a1c8b}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.9px Helvetica; color: #0000e9; -webkit-text-stroke: #0a1c8b}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.9px Helvetica; color: #0000e9; -webkit-text-stroke: #0a1c8b}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.9px Helvetica; color: #131314; -webkit-text-stroke: #131314}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 7.9px Helvetica; color: #131314; -webkit-text-stroke: #131314}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.9px Helvetica; color: #09005a; -webkit-text-stroke: #0a1c8b}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.9px Helvetica; color: #131314; -webkit-text-stroke: #131314; background-color: #ffffff}
+    span.s1 {font-kerning: none; background-color: #ffffff}
+    span.s2 {text-decoration: underline ; font-kerning: none; background-color: #ffffff}
+    span.s3 {text-decoration: underline ; font-kerning: none}
+    span.s4 {font-kerning: none; color: #131314; background-color: #ffffff; -webkit-text-stroke: 0px #131314}
+    span.s5 {text-decoration: underline ; font-kerning: none; color: #0a1c8b; -webkit-text-stroke: 0px #0a1c8b}
+    span.s6 {text-decoration: underline ; font-kerning: none; color: #0000e9; background-color: #ffffff; -webkit-text-stroke: 0px #0a1c8b}
+    span.s7 {font: 10.1px Helvetica; font-kerning: none; color: #131314; background-color: #ffffff; -webkit-text-stroke: 0px #131314}
+    span.s8 {font: 7.9px Helvetica; font-kerning: none; color: #0a1c8b; background-color: #ffffff; -webkit-text-stroke: 0px #0a1c8b}
+    span.s9 {font: 7.9px Helvetica; font-kerning: none; background-color: #ffffff}
+    span.s10 {font-kerning: none}
+    span.s11 {font: 7.9px Helvetica; text-decoration: underline ; font-kerning: none}
+    span.s12 {font: 11.9px Helvetica; font-kerning: none; background-color: #ffffff}
+    span.s13 {font: 7.9px Helvetica; text-decoration: underline ; font-kerning: none; color: #0000e9; background-color: #ffffff}
+    span.s14 {font: 11.9px Helvetica; text-decoration: underline ; font-kerning: none; color: #09005a}
+    table.t1 {border-collapse: collapse}
+    td.td1 {width: 53.0px; background-color: #dfe1e7; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td2 {width: 14.0px; background-color: #dfe1e7; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td3 {width: 107.0px; background-color: #dfe1e7; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td4 {width: 93.0px; background-color: #dfe1e7; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td5 {width: 66.0px; background-color: #dfe1e7; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td6 {width: 51.0px; background-color: #dfe1e7; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td7 {width: 237.0px; background-color: #dfe1e7; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td8 {width: 157.0px; background-color: #dfe1e7; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td9 {width: 106.0px; background-color: #dfe1e7; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td10 {width: 120.0px; background-color: #dfe1e7; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td11 {width: 53.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td12 {width: 14.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td13 {width: 107.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td14 {width: 93.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td15 {width: 66.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td16 {width: 51.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td17 {width: 106.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td18 {width: 120.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td19 {width: 157.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td20 {width: 234.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+    td.td21 {width: 299.0px; border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: #7f8690 #7f8690 #7f8690 #7f8690; padding: 2.4px 4.8px 2.4px 4.8px}
+  </style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="t1">
+  <tbody>
+    <tr>
+      <td rowspan="2" valign="top" class="td1">
+        <p class="p1"><span class="s1"><b>Nuclide</b></span></p>
+        <p class="p2"><span class="s1"><sup>[n 1]</sup></span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p3"><span class="s2"><a href="https://en.wikipedia.org/wiki/Atomic_number"><b><i>Z</i></b><span class="s3"><b><i></i></b></span></a></span></p>
+      </td>
+      <td valign="top" class="td2">
+        <p class="p3"><span class="s2"><a href="https://en.wikipedia.org/wiki/Neutron_number"><b><i>N</i></b><span class="s3"><b><i></i></b></span></a></span></p>
+      </td>
+      <td valign="top" class="td3">
+        <p class="p4"><span class="s2"><a href="https://en.wikipedia.org/wiki/Atomic_mass"><b>Isotopic mass</b></a></span><span class="s4"><b> </b>(<a href="https://en.wikipedia.org/wiki/Dalton_(unit)"><span class="s5">Da</span></a>)</span></p>
+        <p class="p2"><span class="s1"><sup>[n 2][n 3]</sup></span></p>
+      </td>
+      <td rowspan="2" valign="top" class="td4">
+        <p class="p4"><span class="s2"><a href="https://en.wikipedia.org/wiki/Half-life"><b>Half-life</b><span class="s3"><b></b></span></a></span></p>
+        <p class="p2"><span class="s1"><sup>[n 4]</sup></span></p>
+      </td>
+      <td rowspan="2" valign="top" class="td5">
+        <p class="p4"><span class="s2"><a href="https://en.wikipedia.org/wiki/Decay_mode"><b>Decay</b><span class="s3"><b></b></span></a></span></p>
+        <p class="p4"><span class="s2"><a href="https://en.wikipedia.org/wiki/Decay_mode"><b>mode</b><span class="s3"><b></b></span></a></span></p>
+        <p class="p2"><span class="s1"><sup>[n 5]</sup></span></p>
+      </td>
+      <td rowspan="2" valign="top" class="td1">
+        <p class="p4"><span class="s2"><a href="https://en.wikipedia.org/wiki/Decay_product"><b>Daughter</b><span class="s3"><b></b></span></a></span></p>
+        <p class="p4"><span class="s2"><a href="https://en.wikipedia.org/wiki/Decay_product"><b>isotope</b><span class="s3"><b></b></span></a></span></p>
+        <p class="p2"><span class="s1"><sup>[n 6]</sup></span></p>
+      </td>
+      <td rowspan="2" valign="top" class="td6">
+        <p class="p5"><span class="s6"><a href="https://en.wikipedia.org/wiki/Spin_(physics)"><b>Spin</b></a></span><span class="s1"><b> and</b></span></p>
+        <p class="p4"><span class="s2"><a href="https://en.wikipedia.org/wiki/Parity_(physics)#Nuclei"><b>parity</b><span class="s3"><b></b></span></a></span></p>
+        <p class="p2"><span class="s1"><sup>[n 7][n 4]</sup></span></p>
+      </td>
+      <td colspan="2" valign="top" class="td7">
+        <p class="p4"><span class="s2"><a href="https://en.wikipedia.org/wiki/Natural_abundance"><b>Natural abundance</b></a></span><span class="s4"><b> </b></span><span class="s7">(mole fraction)</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" valign="middle" class="td8">
+        <p class="p1"><span class="s1"><b>Excitation energy</b></span><span class="s8"><sup>[n 4]</sup></span></p>
+      </td>
+      <td valign="middle" class="td9">
+        <p class="p1"><span class="s1"><b>Normal proportion</b></span></p>
+      </td>
+      <td valign="middle" class="td10">
+        <p class="p1"><span class="s1"><b>Range of variation</b></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>47</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">20</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">47.01149(54)#</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">7/2−#</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>48</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">21</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">48.00176(43)#</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p3"><span class="s2"><a href="https://en.wikipedia.org/wiki/Proton_emission">p<span class="s3"></span></a></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>47</sup></span><span class="s1">Fe</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">6+#</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>49</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td12">
+        <p class="p1"><span class="s1">22</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td13">
+        <p class="p1"><span class="s1">48.98972(28)#</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td14">
+        <p class="p1"><span class="s1">&lt;35 ns</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">p (&gt;99.9%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>48</sup></span><span class="s1">Fe</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td16">
+        <p class="p1"><span class="s1">7/2−#</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s6"><a href="https://en.wikipedia.org/wiki/Beta_decay">β<span class="s11"><sup>+</sup></span></a></span><span class="s1"> (&lt;.1%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>49</sup></span><span class="s1">Fe</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>50</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td12">
+        <p class="p1"><span class="s1">23</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td13">
+        <p class="p1"><span class="s1">49.98154(18)#</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td14">
+        <p class="p1"><span class="s1">44(4) ms</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>+</sup></span><span class="s1">, p (54%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>49</sup></span><span class="s1">Mn</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td16">
+        <p class="p1"><span class="s1">(6+)</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>+</sup></span><span class="s1"> (46%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>50</sup></span><span class="s1">Fe</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>51</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">24</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">50.97072(16)#</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">60# ms [&gt;200 ns]</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>+</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>51</sup></span><span class="s1">Fe</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">7/2−#</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>52</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">25</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">51.96359(7)#</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">115(23) ms</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>+</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>52</sup></span><span class="s1">Fe</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">(6+)</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="middle" class="td11">
+        <p class="p6"><span class="s1"><sup>52m</sup></span><span class="s12">Co</span></p>
+      </td>
+      <td rowspan="2" colspan="3" valign="middle" class="td19">
+        <p class="p1"><span class="s1">380(100)# keV</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td14">
+        <p class="p1"><span class="s1">104(11)# ms</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>+</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>52</sup></span><span class="s1">Fe</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td16">
+        <p class="p1"><span class="s1">2+#</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p3"><span class="s2"><a href="https://en.wikipedia.org/wiki/Isomeric_transition">IT<span class="s3"></span></a></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>52</sup></span><span class="s1">Co</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>53</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">26</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">52.954219(19)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">242(8) ms</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>+</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>53</sup></span><span class="s1">Fe</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">7/2−#</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="middle" class="td11">
+        <p class="p6"><span class="s1"><sup>53m</sup></span><span class="s12">Co</span></p>
+      </td>
+      <td rowspan="2" colspan="3" valign="middle" class="td19">
+        <p class="p1"><span class="s1">3197(29) keV</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td14">
+        <p class="p1"><span class="s1">247(12) ms</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>+</sup></span><span class="s1"> (98.5%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>53</sup></span><span class="s1">Fe</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td16">
+        <p class="p1"><span class="s1">(19/2−)</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">p (1.5%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>52</sup></span><span class="s1">Fe</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>54</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">53.9484596(8)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">193.28(7) ms</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>+</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><b><sup>54</sup></b></span><span class="s1"><b>Fe</b></span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">0+</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p6"><span class="s1"><sup>54m</sup></span><span class="s12">Co</span></p>
+      </td>
+      <td colspan="3" valign="middle" class="td19">
+        <p class="p1"><span class="s1">197.4(5) keV</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">1.48(2) min</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>+</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><b><sup>54</sup></b></span><span class="s1"><b>Fe</b></span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">(7)+</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>55</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">28</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">54.9419990(8)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">17.53(3) h</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>+</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>55</sup></span><span class="s1">Fe</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">7/2−</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>56</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">29</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">55.9398393(23)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">77.233(27) d</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>+</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><b><sup>56</sup></b></span><span class="s1"><b>Fe</b></span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">4+</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>57</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">30</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">56.9362914(8)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">271.74(6) d</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p3"><span class="s2"><a href="https://en.wikipedia.org/wiki/Electron_capture">EC<span class="s3"></span></a></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><b><sup>57</sup></b></span><span class="s1"><b>Fe</b></span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">7/2−</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>58</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">31</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">57.9357528(13)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">70.86(6) d</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>+</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><b><sup>58</sup></b></span><span class="s1"><b>Fe</b></span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">2+</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p6"><span class="s1"><sup>58m1</sup></span><span class="s12">Co</span></p>
+      </td>
+      <td colspan="3" valign="middle" class="td19">
+        <p class="p1"><span class="s1">24.95(6) keV</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">9.04(11) h</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">IT</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>58</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">5+</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p6"><span class="s1"><sup>58m2</sup></span><span class="s12">Co</span></p>
+      </td>
+      <td colspan="3" valign="middle" class="td19">
+        <p class="p1"><span class="s1">53.15(7) keV</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">10.4(3) μs</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">4+</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>59</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">32</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">58.9331950(7)</span></p>
+      </td>
+      <td colspan="3" valign="middle" class="td20">
+        <p class="p5"><span class="s1"><b>Stable</b></span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">7/2−</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s1">1.0000</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p7"><span class="s13"><a href="https://en.wikipedia.org/wiki/Cobalt-60"><sup>60</sup><span class="s14">Co</span></a></span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">33</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">59.9338171(7)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">5.2713(8) y</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span><span class="s1">, γ</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><b><sup>60</sup></b></span><span class="s1"><b>Ni</b></span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">5+</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="middle" class="td11">
+        <p class="p6"><span class="s1"><sup>60m</sup></span><span class="s12">Co</span></p>
+      </td>
+      <td rowspan="2" colspan="3" valign="middle" class="td19">
+        <p class="p1"><span class="s1">58.59(1) keV</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td14">
+        <p class="p1"><span class="s1">10.467(6) min</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">IT (99.76%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>60</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td16">
+        <p class="p1"><span class="s1">2+</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span><span class="s1"> (.24%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><b><sup>60</sup></b></span><span class="s1"><b>Ni</b></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>61</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">34</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">60.9324758(10)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">1.650(5) h</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><b><sup>61</sup></b></span><span class="s1"><b>Ni</b></span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">7/2−</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>62</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">35</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">61.934051(21)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">1.50(4) min</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><b><sup>62</sup></b></span><span class="s1"><b>Ni</b></span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">2+</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="middle" class="td11">
+        <p class="p6"><span class="s1"><sup>62m</sup></span><span class="s12">Co</span></p>
+      </td>
+      <td rowspan="2" colspan="3" valign="middle" class="td19">
+        <p class="p1"><span class="s1">22(5) keV</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td14">
+        <p class="p1"><span class="s1">13.91(5) min</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span><span class="s1"> (99%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><b><sup>62</sup></b></span><span class="s1"><b>Ni</b></span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td16">
+        <p class="p1"><span class="s1">5+</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">IT (1%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>62</sup></span><span class="s1">Co</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>63</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">36</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">62.933612(21)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">26.9(4) s</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>63</sup></span><span class="s1">Ni</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">7/2−</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>64</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">37</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">63.935810(21)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">0.30(3) s</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><b><sup>64</sup></b></span><span class="s1"><b>Ni</b></span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">1+</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>65</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">38</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">64.936478(14)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">1.20(6) s</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>65</sup></span><span class="s1">Ni</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">(7/2)−</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>66</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">39</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">65.93976(27)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">0.18(1) s</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>66</sup></span><span class="s1">Ni</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">(3+)</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p6"><span class="s1"><sup>66m1</sup></span><span class="s12">Co</span></p>
+      </td>
+      <td colspan="3" valign="middle" class="td19">
+        <p class="p1"><span class="s1">175(3) keV</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">1.21(1) μs</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">(5+)</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p6"><span class="s1"><sup>66m2</sup></span><span class="s12">Co</span></p>
+      </td>
+      <td colspan="3" valign="middle" class="td19">
+        <p class="p1"><span class="s1">642(5) keV</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">&gt;100 μs</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">(8-)</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>67</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">40</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">66.94089(34)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">0.425(20) s</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>67</sup></span><span class="s1">Ni</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">(7/2−)#</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>68</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">41</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">67.94487(34)</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">0.199(21) s</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>68</sup></span><span class="s1">Ni</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">(7-)</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p6"><span class="s1"><sup>68m</sup></span><span class="s12">Co</span></p>
+      </td>
+      <td colspan="3" valign="middle" class="td19">
+        <p class="p1"><span class="s1">150(150)# keV</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">1.6(3) s</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">(3+)</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>69</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td12">
+        <p class="p1"><span class="s1">42</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td13">
+        <p class="p1"><span class="s1">68.94632(36)</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td14">
+        <p class="p1"><span class="s1">227(13) ms</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span><span class="s1"> (&gt;99.9%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>69</sup></span><span class="s1">Ni</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td16">
+        <p class="p1"><span class="s1">7/2−#</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span><span class="s1">, <a href="https://en.wikipedia.org/wiki/Neutron_emission"><span class="s5">n</span></a> (&lt;.1%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>68</sup></span><span class="s1">Ni</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>70</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td12">
+        <p class="p1"><span class="s1">43</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td13">
+        <p class="p1"><span class="s1">69.9510(9)</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td14">
+        <p class="p1"><span class="s1">119(6) ms</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span><span class="s1"> (&gt;99.9%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>70</sup></span><span class="s1">Ni</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td16">
+        <p class="p1"><span class="s1">(6-)</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span><span class="s1">, n (&lt;.1%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>69</sup></span><span class="s1">Ni</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p6"><span class="s1"><sup>70m</sup></span><span class="s12">Co</span></p>
+      </td>
+      <td colspan="3" valign="middle" class="td19">
+        <p class="p1"><span class="s1">200(200)# keV</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">500(180) ms</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">(3+)</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>71</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td12">
+        <p class="p1"><span class="s1">44</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td13">
+        <p class="p1"><span class="s1">70.9529(9)</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td14">
+        <p class="p1"><span class="s1">97(2) ms</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span><span class="s1"> (&gt;99.9%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>71</sup></span><span class="s1">Ni</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td16">
+        <p class="p1"><span class="s1">7/2−#</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span><span class="s1">, n (&lt;.1%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>70</sup></span><span class="s1">Ni</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>72</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td12">
+        <p class="p1"><span class="s1">45</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td13">
+        <p class="p1"><span class="s1">71.95781(64)#</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td14">
+        <p class="p1"><span class="s1">62(3) ms</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span><span class="s1"> (&gt;99.9%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>72</sup></span><span class="s1">Ni</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td16">
+        <p class="p1"><span class="s1">(6- ,7-)</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td rowspan="2" valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s1">β</span><span class="s9"><sup>−</sup></span><span class="s1">, n (&lt;.1%)</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>71</sup></span><span class="s1">Ni</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>73</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">46</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">72.96024(75)#</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">41(4) ms</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">7/2−#</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>74</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">47</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">73.96538(86)#</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">50# ms [&gt;300 ns]</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td16">
+        <p class="p1"><span class="s1">0+</span></p>
+      </td>
+      <td valign="middle" class="td17">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td18">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s9"><sup>75</sup></span><span class="s1">Co</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">27</span></p>
+      </td>
+      <td valign="middle" class="td12">
+        <p class="p1"><span class="s1">48</span></p>
+      </td>
+      <td valign="middle" class="td13">
+        <p class="p1"><span class="s1">74.96833(86)#</span></p>
+      </td>
+      <td valign="middle" class="td14">
+        <p class="p1"><span class="s1">40# ms [&gt;300 ns]</span></p>
+      </td>
+      <td valign="middle" class="td15">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td valign="middle" class="td11">
+        <p class="p1"><span class="s10"><br>
+</span></p>
+      </td>
+      <td colspan="3" valign="middle" class="td21">
+        <p class="p8"><span class="s10">7/2−#</span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
