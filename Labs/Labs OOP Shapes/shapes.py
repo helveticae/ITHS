@@ -23,15 +23,18 @@ en metod som checkar om rektangelinstansen är en kvadrat
 """
 
 class Shape:
+    """Parent class."""
     def __init__(self, area: float | int, circumference: float | int, position: tuple) -> None:
         self.area = area
         self.circumference = circumference
         self.position = position
 
 class Square(Shape):
+    """Child class for square, inherits from Shape."""
     pass
 
 class Circle(Shape):
+    """Child class for circle, inherits from Shape."""
     pass
 
 square1 = Square(25.0,20.0,[0.0,0.0])
