@@ -1,5 +1,12 @@
 #TODO finish before deadline
 
-class Shape:
+
+
+
+
+class Square:
     pass
 
+class Circle:
+
+class 
