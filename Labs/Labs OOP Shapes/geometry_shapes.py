@@ -33,31 +33,63 @@ class Shape:
     # Read-only @property, getters
     @property
     def position(self) -> tuple:
+
         print("pos getter running")
+
         return self._x_pos
 
     @property
     def size(self) -> int:
+
         print("size getter running")
+        
         return self._size
 
-    
-    # Setters
     @position.setter
     def position(self, position):
+
         print("position setter running")
+
         if not isinstance(position, (tuple)):
             raise TypeError(f"value must be tuple not {type(position).__name__}")
         self._value = position
 
     @size.setter
     def size(self, size):
+
         print("size setter running")
+
         if not isinstance(size, (tuple)):
             raise TypeError(f"value must be tuple not {type(size).__name__}")
         self._value = size
 
-square1 = Shape((1,1),(1,1))
+
+    # Operator overloading for size equality.
+    def __eq__(self, other: Shape):
+        """Checks if shapes have identical size."""
+        if self._size == other._size:
+            return True
+        else: return False
+
+class Rectangle(Shape):
+    """Rectangle. Inherits from Shape."""
+
+    def __init__(self, position: float, size: tuple) -> None:
+        super().__init__(position, size)
+        self.position = position
+        self._size = size
+
+    @property
+    def area(self):
+        return self.size[0] * self.size[1]
+
+square1 = Rectangle((1,1),(2,2))
+
+square2 = Rectangle((1,1),(2,1))
+
+print(square1 == square2)
+
+print(square1.area)
 
 # @dataclass
 # class Circle(Shape):
