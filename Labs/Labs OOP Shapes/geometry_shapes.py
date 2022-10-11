@@ -23,12 +23,11 @@ en metod som checkar om rektangelinstansen är en kvadrat
 
 """
 
-# Refactoring with @dataclass and ints
+# Refactoring with @dataclass and int
 
 @dataclass
 class Shape:
     position: tuple
-    size: tuple
 
     # Read-only @property, getters
     @property
@@ -36,60 +35,54 @@ class Shape:
 
         print("pos getter running")
 
-        return self._x_pos
+        return self._position
 
-    @property
-    def size(self) -> int:
-
-        print("size getter running")
-        
-        return self._size
-
+    # Setter
     @position.setter
-    def position(self, position):
+    def position(self, value):
 
         print("position setter running")
 
-        if not isinstance(position, (tuple)):
-            raise TypeError(f"value must be tuple not {type(position).__name__}")
-        self._value = position
+        if not isinstance(value, (tuple)):
+            raise TypeError(f"Position must be tuple not {type(value)}")
+        self._position = value
 
-    @size.setter
-    def size(self, size):
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 
-        print("size setter running")
+class Rectangle(Shape):
+    """Rectangle. Inherits from Shape."""
+    def __init__(self, position: tuple, width: float, height: float) -> None:
+        super().__init__(position)
+        self.width = width
+        self.height = height
 
-        if not isinstance(size, (tuple)):
-            raise TypeError(f"value must be tuple not {type(size).__name__}")
-        self._value = size
-
+    @property
+    def area(self):
+        return self.height * self.width
 
     # Operator overloading for size equality.
     def __eq__(self, other: Shape):
         """Checks if shapes have identical size."""
-        if self._size == other._size:
+        if self.width == other.width and self.height == other.height:
             return True
         else: return False
 
-class Rectangle(Shape):
-    """Rectangle. Inherits from Shape."""
+    # Operator overloading for area comparison
+    def __lt__(self, other) -> bool:
+        if self.Area < other.Area: return True
+        else: return False
+        
+    def __le__(self, other) -> bool:
+        if self.Area <= other.Area: return True
+        else: return False
 
-    def __init__(self, position: float, size: tuple) -> None:
-        super().__init__(position, size)
-        self.position = position
-        self._size = size
-
-    @property
-    def area(self):
-        return self.size[0] * self.size[1]
-
-square1 = Rectangle((1,1),(2,2))
-
-square2 = Rectangle((1,1),(2,1))
-
-print(square1 == square2)
-
-print(square1.area)
+    def __gt__(self, other) -> bool:
+        if self.Area > other.Area: return True
+        else: return False
+        
+    def __ge__(self, other) -> bool:
+        if self.Area >= other.Area: return True
+        else: return False
 
 # @dataclass
 # class Circle(Shape):
