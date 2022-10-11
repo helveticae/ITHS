@@ -21,9 +21,9 @@ felhantering
 @dataclass(repr=False)
 class Shape:
     """
-    Parent class.
+    Used to instantiate shapes (2D and 3D).
     
-    An abstract(?) class. Shouldn't be instantiated on its own.
+    Forces all shape to have positional values. Shouldn't be instantiated on its own.
 
     Attributes
     ----------
@@ -52,8 +52,11 @@ class Shape:
 
         if not isinstance(value, (tuple)):
             raise TypeError(f"Position must be tuple not {type(value)}")
-        self._position = value
 
+        #TODO Throw ValueError if points in position tuple =< object dimension value
+        #i.e. a 3D object must cover at least 3 points in space, etc.
+
+        self._position = value
 
     def translate_position(self, position: tuple) -> tuple:
         """
@@ -77,6 +80,9 @@ class Shape:
 
         return self.position
         
+    def __str__(self) -> str:
+        return str(self.__dict__)
+
     def __repr__(self):
         return f"{self.__class__.__name__}, midpoint at {self.position}.)"
 
@@ -97,10 +103,10 @@ class Rectangle(Shape):
         Height (y) of rectangle.
 
     area: float
-        Area of rectangle.
+        Area (A) of rectangle.
 
     perimeter: float
-        Perimeter of rectangle.
+        Perimeter (P) of rectangle.
 
     Methods
     -------
@@ -171,20 +177,18 @@ class Circle(Shape):
 
     Attributes
     ----------
-    width: float
-        Width (x) of circle.
-
-    height: float
-        Height (y) of circle.
+    radius: float
+        Radius (r) of circle.
 
     area: float
-        Area of circle.
+        Area (A) of circle.
 
     circumference: float
-        Circumference of circle.
+        Circumference (C) of circle.
 
     Methods
     -------
+    n/a
 
     """
     def __init__(self, position: tuple, radius: float) -> None:
@@ -207,3 +211,78 @@ class Circle(Shape):
 
     def __repr__(self):
         return f"{self.__class__.__name__} -- midpoint at {self.position} -- {self.radius=}.)"
+
+
+class Sphere(Circle):
+    """
+    Child class of Circle. Inhertis from Shape.
+    
+    Contains radius, volume and surface area.
+
+    Attributes
+    ----------
+    radius: float
+        Radius (r) of sphere.
+
+    volume: float
+        Volume (V) of sphere.
+
+    surface_area: float
+        Area (A) of sphere.
+
+    Methods
+    -------
+    n/a
+    """
+
+    @property
+    def volume(self):
+        return (4/3) * math.pi * self.radius ** 3
+
+    @property
+    def surface_area(self):
+        return 4 * math.pi * self.radius * 2
+
+        
+class Cube(Rectangle):
+    """
+    Child class of Shape.
+    
+    Contains width, height, length, surface area and and volume.
+
+    Attributes
+    ----------
+    width: float
+        Width (x) of cube.
+
+    height: float
+        Height (y) of cube.
+
+    length: float
+        Length (z) of cube. #TODO
+
+    volume: float
+        Volume (V) of cube.
+
+    surface_area: float
+        Area (A) of cube.
+
+
+    Methods
+    -------
+    n/a
+
+    """
+
+    def __init__(self, position: tuple, width: float, height: float, length: float) -> None:
+        
+        super().__init__(position, width, height)
+        self.length = length
+
+    @property
+    def volume(self):
+        return self.area * self.length
+
+    @property
+    def surface_area(self):
+        return 6 * self.area
