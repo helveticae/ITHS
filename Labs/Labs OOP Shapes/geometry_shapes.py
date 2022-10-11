@@ -109,7 +109,7 @@ class Circle(Shape):
 
     @property
     def area(self):
-        return math.pi * self.radius * 2
+        return math.pi * self.radius ** 2
 
 
 # square1 = Rectangle((0,0),12,12)
