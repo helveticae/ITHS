@@ -6,10 +6,11 @@ from dataclasses import dataclass
 """
 Class should have:
 
-area property
+area property (Done for rectangle)
 circumference property
 
 operator overload av == för att checka likhet
+
 operator overload av komparatoroperatorer <,>,<=>,> för jämförelser
 override av __repr__()
 override av __str__
@@ -23,7 +24,12 @@ en metod som checkar om rektangelinstansen är en kvadrat
 
 """
 
+
+
+
 # Refactoring with @dataclass and int
+
+#TODO Make this @abstract instead
 
 @dataclass
 class Shape:
@@ -47,18 +53,26 @@ class Shape:
             raise TypeError(f"Position must be tuple not {type(value)}")
         self._position = value
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 
 class Rectangle(Shape):
     """Rectangle. Inherits from Shape."""
     def __init__(self, position: tuple, width: float, height: float) -> None:
+        
         super().__init__(position)
+
         self.width = width
+
         self.height = height
 
     @property
     def area(self):
-        return self.height * self.width
+        return self.width * self.height
+
+    @property
+    def perimeter(self):
+        return self.width * 2 + self.height *2
+
 
     # Operator overloading for size equality.
     def __eq__(self, other: Shape):
@@ -84,16 +98,16 @@ class Rectangle(Shape):
         if self.Area >= other.Area: return True
         else: return False
 
-# @dataclass
-# class Circle(Shape):
-#     pass
 
-# @dataclass
-# class Rectangle(Shape):
-#     pass
+class Circle(Shape):
+    """Rectangle. Inherits from Shape."""
+    def __init__(self, position: tuple, width: float, height: float) -> None:
+        
+        super().__init__(position)
 
-# @dataclass
-# class Square(Rectangle):
+        self.width = width
+
+        self.height = height
 
 
 
