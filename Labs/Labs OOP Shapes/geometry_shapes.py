@@ -2,20 +2,6 @@ from __future__ import annotations
 from dataclasses import dataclass
 import math
 
-#TODO finish before deadline
-
-"""
-override av __str__
-
-x och y som representerar mittpositionen av objektet
-
-en metod som checkar om en viss punkt befinner sig innanför objektet
-felhantering
-
-"""
-
-# Refactoring with @dataclass
-
 #TODO Make this @abstract instead (?)
 
 @dataclass(repr=False)
@@ -29,12 +15,11 @@ class Shape:
     ----------
     position : tuple
         Values representing the center position of the object (x,y,z.. etc).
-
+    
     Methods
     ----------
     translate_position(position: tuple)
         Call as normal class method to update positional data of given shape.
-
     """
 
     position: tuple
@@ -62,16 +47,14 @@ class Shape:
         """
         Callable method to translate positional values (center point) of shape.
 
-        Same as typing 'object.position = (tuple)' except translate_position()
-        stores old positional values in variable 'old_pos'.
-
+        Same as typing 'object.position' except translate_position() stores previous positional values in variable 'old_pos'.
         """
 
         print("translate_position running")
 
         # Stores previous position
         old_pos = self.position
-                # TODO: add meaning to this variable (maybe animating path or something)
+                # TODO: add meaning to this variable (maybe animating path or something(?))
 
         # Updates position to new value
         self.position = position
@@ -79,32 +62,54 @@ class Shape:
         print(f"{old_pos=}, new={position}")
 
         return self.position
+
+  # Operator overloading for size equality in AREA.
+    def __eq__(self, other: Shape) -> bool:
+        print("__eq__ called from Shape class")
+        """Checks if any two given rectangles are identical in size."""
+
+        if self.width == other.width and self.height == other.height:
+            return True
+        else: return False
+
+    # Operator overloading for AREA comparison
+    def __lt__(self, other: Shape) -> bool:
+        print("__lt__ called from Shape class")
+        if self.area < other.area: return True
+        else: return False
+        
+    def __le__(self, other: Shape) -> bool:
+        print("__le__ called from Shape class")
+        if self.area <= other.area: return True
+        else: return False
+
+    def __gt__(self, other: Shape) -> bool:
+        print("__gt__ called from Shape class")
+        if self.area > other.area: return True
+        else: return False
+        
+    def __ge__(self, other: Shape) -> bool:
+        print("__ge__ called from Shape class")
+        if self.area >= other.area: return True
+        else: return False
         
     def __str__(self) -> str:
         return str(self.__dict__)
 
-    def __repr__(self):
-        return f"{self.__class__.__name__}, midpoint at {self.position}.)"
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 
 class Rectangle(Shape):
     """
-    Child class of Shape.
-    
-    Contains width, height, area and perimeter.
+    Child class Rectangle. Inherits from Shape. Contains width, height, area and perimeter.
 
     Attributes
     ----------
     width: float
         Width (x) of rectangle.
-
     height: float
         Height (y) of rectangle.
-
     area: float
         Area (A) of rectangle.
-
     perimeter: float
         Perimeter (P) of rectangle.
 
@@ -123,7 +128,7 @@ class Rectangle(Shape):
         self.width = width
         self.height = height
 
-    @property
+    @property 
     def area(self):
         return self.width * self.height
 
@@ -138,59 +143,27 @@ class Rectangle(Shape):
             return True
         else: return False
 
-    # Operator overloading for size equality.
-    def __eq__(self, other: Shape) -> bool:
-        """Checks if any two given rectangles are identical in size."""
-
-        if self.width == other.width and self.height == other.height:
-            return True
-        else: return False
-
-    # Operator overloading for area comparison
-    def __lt__(self, other: Shape) -> bool:
-        if self.Area < other.Area: return True
-        else: return False
-        
-    def __le__(self, other: Shape) -> bool:
-        if self.Area <= other.Area: return True
-        else: return False
-
-    def __gt__(self, other: Shape) -> bool:
-        if self.Area > other.Area: return True
-        else: return False
-        
-    def __ge__(self, other: Shape) -> bool:
-        if self.Area >= other.Area: return True
-        else: return False
-
     def __repr__(self):
         return f"{self.__class__.__name__} -- midpoint at {self.position} -- {self.area=}.)"
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-
-
 class Circle(Shape):
     """
-    Child class of Shape.
-    
-    Contains radius, area and circumference.
+    Child class Circle. Inhertis from Shape. Contains radius, area and circumference.
 
     Attributes
     ----------
     radius: float
         Radius (r) of circle.
-
     area: float
         Area (A) of circle.
-
     circumference: float
         Circumference (C) of circle.
 
     Methods
     -------
     n/a
-
     """
+
     def __init__(self, position: tuple, radius: float) -> None:
         
         super().__init__(position)
@@ -204,29 +177,32 @@ class Circle(Shape):
     def circumference(self):
         return math.pi * self.radius * 2
 
-
-    def is_unit_circle(self, width: float, height: float) -> bool:
+    def is_unit_circle(self, radius: float) -> bool:
         """Should check if given circle is unit."""
         return True
 
+ # Operator overloading for size equality in AREA.
+    def __eq__(self, other: Shape) -> bool:
+        """Checks if any two given rectangles are identical in size."""
+
+        if self.area == other.area:
+            return True
+        else: return False
+
     def __repr__(self):
-        return f"{self.__class__.__name__} -- midpoint at {self.position} -- {self.radius=}.)"
+        return f"{self.__class__.__name__} -- midpoint at {self.position}, {self.radius=}, {self.area=}.)"
 
 
 class Sphere(Circle):
     """
-    Child class of Circle. Inhertis from Shape.
-    
-    Contains radius, volume and surface area.
+    Child class Sphere. Inhertis from Circle. Contains radius, volume and surface area.
 
     Attributes
     ----------
     radius: float
         Radius (r) of sphere.
-
     volume: float
         Volume (V) of sphere.
-
     surface_area: float
         Area (A) of sphere.
 
@@ -242,36 +218,57 @@ class Sphere(Circle):
     @property
     def surface_area(self):
         return 4 * math.pi * self.radius * 2
+    
+    # Operator overloading for VOLUME equality.
+    def __eq__(self, other: Shape) -> bool:
+        """Checks if any two given shapes are identical in volume."""
+        print("__eq__ called from Sphere class")
 
+        if self.volume == other.volume:
+            return True
+        else: return False
+
+    # Operator overloading for VOLUME comparison.
+    def __lt__(self, other: Shape) -> bool:
+        print("__lt__ called from Sphere class")
+        if self.volume < other.volume: return True
+        else: return False
         
+    def __le__(self, other: Shape) -> bool:
+        print("__le__ called from Sphere class")
+        if self.volume <= other.volume: return True
+        else: return False
+
+    def __gt__(self, other: Shape) -> bool:
+        print("__gt__ called from Sphere class")
+        if self.volume > other.volume: return True
+        else: return False
+        
+    def __ge__(self, other: Shape) -> bool:
+        print("__ge__ called from Sphere class")
+        if self.volume >= other.volume: return True
+        else: return False
+     
 class Cube(Rectangle):
     """
-    Child class of Shape.
-    
-    Contains width, height, length, surface area and and volume.
+    Child class Cube. Inhertis from Rectangle. Contains width, height, length, surface area and and volume.
 
     Attributes
-    ----------
+    -------
     width: float
         Width (x) of cube.
-
     height: float
         Height (y) of cube.
-
     length: float
-        Length (z) of cube. #TODO
-
+        Length (z) of cube.
     volume: float
         Volume (V) of cube.
-
     surface_area: float
         Area (A) of cube.
-
 
     Methods
     -------
     n/a
-
     """
 
     def __init__(self, position: tuple, width: float, height: float, length: float) -> None:
@@ -281,8 +278,45 @@ class Cube(Rectangle):
 
     @property
     def volume(self):
-        return self.area * self.length
+        return self.width * self.height * self.length
 
     @property
     def surface_area(self):
-        return 6 * self.area
+        return 6 * (self.width * self.height * self.length)
+
+   # Operator overloading for VOLUME equality.
+    def __eq__(self, other: Shape) -> bool:
+        """Checks if any two given shapes are identical in volume."""
+        print("__eq__ called from Cube class")
+
+        if self.volume == other.volume:
+            return True
+        else: return False
+
+    # Operator overloading for VOLUME comparison.
+    def __lt__(self, other: Shape) -> bool:
+        print("__lt__ called from Cube class")
+        if self.volume < other.volume: return True
+        else: return False
+        
+    def __le__(self, other: Shape) -> bool:
+        print("__le__ called from Cube class")
+        if self.volume <= other.volume: return True
+        else: return False
+
+    def __gt__(self, other: Shape) -> bool:
+        print("__gt__ called from Cube class")
+        if self.volume > other.volume: return True
+        else: return False
+        
+    def __ge__(self, other: Shape) -> bool:
+        print("__ge__ called from Cube class")
+        if self.volume >= other.volume: return True
+        else: return False
+
+    def __repr__(self):
+        return f"{self.__class__.__name__} -- midpoint at {self.position} -- {self.volume=}.)"
+
+
+if __name__ == "__main__":
+    print("TODO: Mittpunkter från coordinate tuple. Unit circle. Plotting.")
