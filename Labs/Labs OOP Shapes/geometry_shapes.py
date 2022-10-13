@@ -1,8 +1,7 @@
 from __future__ import annotations
 from dataclasses import dataclass
 import math
-
-#TODO Make this @abstract instead (?)
+import matplotlib.pyplot as plt
 
 @dataclass(repr=False)
 class Shape:
@@ -92,10 +91,15 @@ class Shape:
         print("__ge__ called from Shape class")
         if self.area >= other.area: return True
         else: return False
-        
+
+
+    # str & repr
     def __str__(self) -> str:
         return str(self.__dict__)
 
+    def __repr__(self) -> str:
+        return str(self.__dict__)
+        
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
 
 class Rectangle(Shape):
@@ -116,7 +120,10 @@ class Rectangle(Shape):
     Methods
     -------
     is_square(width: float, height: float)
-       Return True if width == height.
+       Returns True if width == height.
+
+    get_vertex(self)
+        Calculates four corner points from square center.
 
     overloaded __eq__, __lt__, __le__, __gt__, __ge__
 
@@ -139,9 +146,19 @@ class Rectangle(Shape):
     def is_square(self, width: float, height: float) -> bool:
         """Checks if given rectangle is square."""
 
-        if self.width == self.height:
-            return True
+        if self.width == self.height: return True
         else: return False
+
+    def get_vertex(self) -> tuple:
+        """Returns P and Q from width, height and position."""
+
+        P1 = ((self.position[1] + self.width /-2, self.position[0] + self.height /2))# top left
+        P2 = ((self.position[1] + self.width /2, self.position[0]+ self.height /2)) # top right
+        Q1 = ((self.position[1] + self.width /-2, self.position[0] + self.height /-2))# bottom left
+        Q2 = ((self.position[1] + self.width /2, self.position[0] + self.height /-2)) # bottom right
+        
+        return [P1,P2,Q1,Q2]
+
 
     def __repr__(self):
         return f"{self.__class__.__name__} -- midpoint at {self.position} -- {self.area=}.)"
@@ -177,21 +194,21 @@ class Circle(Shape):
     def circumference(self):
         return math.pi * self.radius * 2
 
-    def is_unit_circle(self, radius: float) -> bool:
-        """Should check if given circle is unit."""
-        return True
+    def is_unit_circle(self) -> bool:
+        if self.radius == 1 and self.position[0] == 0 and self.position[1] == 0:
+            return True
+        else:
+            return False
 
  # Operator overloading for size equality in AREA.
     def __eq__(self, other: Shape) -> bool:
         """Checks if any two given rectangles are identical in size."""
 
-        if self.area == other.area:
-            return True
+        if self.area == other.area: return True
         else: return False
 
     def __repr__(self):
         return f"{self.__class__.__name__} -- midpoint at {self.position}, {self.radius=}, {self.area=}.)"
-
 
 class Sphere(Circle):
     """
@@ -224,8 +241,7 @@ class Sphere(Circle):
         """Checks if any two given shapes are identical in volume."""
         print("__eq__ called from Sphere class")
 
-        if self.volume == other.volume:
-            return True
+        if self.volume == other.volume: return True
         else: return False
 
     # Operator overloading for VOLUME comparison.
@@ -316,7 +332,3 @@ class Cube(Rectangle):
 
     def __repr__(self):
         return f"{self.__class__.__name__} -- midpoint at {self.position} -- {self.volume=}.)"
-
-
-if __name__ == "__main__":
-    print("TODO: Mittpunkter från coordinate tuple. Unit circle. Plotting.")
