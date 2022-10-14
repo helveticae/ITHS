@@ -17,8 +17,11 @@ class Shape:
     
     Methods
     ----------
-    translate_position(position: tuple)
+    translate_position()
         Call as normal class method to update positional data of given shape.
+
+    operators overloaded for area comparison: __eq__, __lt__, __le__, __gt__, __ge__
+    
     """
 
     position: tuple
@@ -37,7 +40,7 @@ class Shape:
         if not isinstance(value, (tuple)):
             raise TypeError(f"Position must be tuple not {type(value)}")
 
-        #TODO Throw ValueError if points in position tuple =< object dimension value
+        #TODO Throw ValueError if points in position tuple < object dimensions
         #i.e. a 3D object must cover at least 3 points in space, etc.
 
         self._position = value
@@ -51,9 +54,8 @@ class Shape:
 
         print("translate_position running")
 
-        # Stores previous position
+        # Stores previous position TODO: add meaning to this variable (maybe animate path or something(?))
         old_pos = self.position
-                # TODO: add meaning to this variable (maybe animating path or something(?))
 
         # Updates position to new value
         self.position = position
@@ -62,36 +64,39 @@ class Shape:
 
         return self.position
 
-  # Operator overloading for size equality in AREA.
+    # Operator overloading for equality in area.
     def __eq__(self, other: Shape) -> bool:
         print("__eq__ called from Shape class")
-        """Checks if any two given rectangles are identical in size."""
+        """Checks if any two given shapes are identical in area."""
 
         if self.width == other.width and self.height == other.height:
             return True
         else: return False
 
-    # Operator overloading for AREA comparison
+    # Continue overloading <, <=, >, >=
     def __lt__(self, other: Shape) -> bool:
         print("__lt__ called from Shape class")
+
         if self.area < other.area: return True
         else: return False
         
     def __le__(self, other: Shape) -> bool:
         print("__le__ called from Shape class")
+
         if self.area <= other.area: return True
         else: return False
 
     def __gt__(self, other: Shape) -> bool:
         print("__gt__ called from Shape class")
+
         if self.area > other.area: return True
         else: return False
         
     def __ge__(self, other: Shape) -> bool:
         print("__ge__ called from Shape class")
+
         if self.area >= other.area: return True
         else: return False
-
 
     # str & repr
     def __str__(self) -> str:
@@ -100,8 +105,6 @@ class Shape:
     def __repr__(self) -> str:
         return str(self.__dict__)
         
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - #
-
 class Rectangle(Shape):
     """
     Child class Rectangle. Inherits from Shape. Contains width, height, area and perimeter.
@@ -119,13 +122,11 @@ class Rectangle(Shape):
 
     Methods
     -------
-    is_square(width: float, height: float)
+    is_square()
        Returns True if width == height.
 
-    get_vertex(self)
-        Calculates four corner points from square center.
-
-    overloaded __eq__, __lt__, __le__, __gt__, __ge__
+    get_vertices()
+        Calculates four corner points from square center point using width and height.
 
     """
 
@@ -141,7 +142,8 @@ class Rectangle(Shape):
 
     @property
     def perimeter(self):
-        return self.width * 2 + self.height *2
+        "Returns width and height * 2"
+        return (self.width + self.height) * 2
 
     def is_square(self, width: float, height: float) -> bool:
         """Checks if given rectangle is square."""
@@ -149,15 +151,24 @@ class Rectangle(Shape):
         if self.width == self.height: return True
         else: return False
 
-    def get_vertex(self) -> tuple:
-        """Returns P and Q from width, height and position."""
+    def get_vertices(self) -> tuple:
+        """Returns points P and Q from width, height and position."""
 
         P1 = ((self.position[1] + self.width /-2, self.position[0] + self.height /2))# top left
         P2 = ((self.position[1] + self.width /2, self.position[0]+ self.height /2)) # top right
         Q1 = ((self.position[1] + self.width /-2, self.position[0] + self.height /-2))# bottom left
         Q2 = ((self.position[1] + self.width /2, self.position[0] + self.height /-2)) # bottom right
-        
-        return [P1,P2,Q1,Q2]
+
+        return [(P1,P2),(Q1,Q2)]
+        # Probably a better way to do this...
+
+
+    def point_inside(self, input_point: tuple) -> bool:
+        """Returns True if given point is inside rectangle."""
+    # Not correct, redo.
+    # def point_inside(self, input_point: tuple) -> bool:
+    #     "Returns True if given point is inside square."
+
 
 
     def __repr__(self):
@@ -178,7 +189,11 @@ class Circle(Shape):
 
     Methods
     -------
-    n/a
+    is_unit_circle()
+        Returns True if circle position is 0.0 and radius is 1.
+
+    point_inside()
+        Returns True if given point is inside circle.
     """
 
     def __init__(self, position: tuple, radius: float) -> None:
@@ -195,15 +210,27 @@ class Circle(Shape):
         return math.pi * self.radius * 2
 
     def is_unit_circle(self) -> bool:
+        "Returns True if circle position is 0.0 and radius is 1."
+
         if self.radius == 1 and self.position[0] == 0 and self.position[1] == 0:
             return True
         else:
             return False
 
- # Operator overloading for size equality in AREA.
-    def __eq__(self, other: Shape) -> bool:
-        """Checks if any two given rectangles are identical in size."""
+    # redo this
+    def point_inside(self, input_point: tuple) -> bool:
+        "Returns True if given point is inside circle."
+        
+        if math.dist(self.position, input_point) <= self.radius:
+            return True
+        else:
+            return False
 
+ # Operator overloading for equality in area.
+    def __eq__(self, other: Shape) -> bool:
+        """Checks if any two given 2D shapes are identical in area."""
+        print("__eq__ called from Circle class")
+        
         if self.area == other.area: return True
         else: return False
 
@@ -221,7 +248,7 @@ class Sphere(Circle):
     volume: float
         Volume (V) of sphere.
     surface_area: float
-        Area (A) of sphere.
+        Surface area (A) of sphere.
 
     Methods
     -------
@@ -236,7 +263,7 @@ class Sphere(Circle):
     def surface_area(self):
         return 4 * math.pi * self.radius * 2
     
-    # Operator overloading for VOLUME equality.
+    # Operator overloading for volume equality.
     def __eq__(self, other: Shape) -> bool:
         """Checks if any two given shapes are identical in volume."""
         print("__eq__ called from Sphere class")
@@ -244,24 +271,27 @@ class Sphere(Circle):
         if self.volume == other.volume: return True
         else: return False
 
-    # Operator overloading for VOLUME comparison.
     def __lt__(self, other: Shape) -> bool:
         print("__lt__ called from Sphere class")
+
         if self.volume < other.volume: return True
         else: return False
         
     def __le__(self, other: Shape) -> bool:
         print("__le__ called from Sphere class")
+
         if self.volume <= other.volume: return True
         else: return False
 
     def __gt__(self, other: Shape) -> bool:
         print("__gt__ called from Sphere class")
+
         if self.volume > other.volume: return True
         else: return False
         
     def __ge__(self, other: Shape) -> bool:
         print("__ge__ called from Sphere class")
+        
         if self.volume >= other.volume: return True
         else: return False
      
